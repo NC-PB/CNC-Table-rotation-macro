@@ -10,6 +10,7 @@ The file name corresponds to the respective kinematics.
 | XYZ+B  |      |
 | XYZ+AC |      |
 | XYZ+BC |      |
+
 A-Axis rotates around the X-Axis
 B-Axis rotates around the Y-Axis
 C-Axis rotates around the Z-Axis
@@ -33,6 +34,7 @@ G65 P5555 A45. B-45. C90. H56 I0 J0 K0 X0 Y0 Z0
 | X         | X Datum shift after the rotation  |
 | Y         | Y Datum shift after the rotation  |
 | Z         | Z Datum shift after the rotation  |
+
 The Macro will write the coordinates of the new position after the rotation in G59 and actvate it!
 The datum shift after the rotation is only ment for fine adjustment during production done on the machine.
 
@@ -51,4 +53,5 @@ The parameter assignment within the macro is as follows:
 | #24              | X Datum shift after the rotation  |
 |  #25             | Y Datum shift after the rotation  |
 | #26              | Z Datum shift after the rotation  |
+
 Depending on the rotation axes used, not all parameters are used.
