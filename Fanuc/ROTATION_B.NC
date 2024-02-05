@@ -1,0 +1,41 @@
+%
+:5555(ROTATION_B)
+
+(B-AXIS CENTER)
+#31 = 0 (X)
+#33 = 0 (Z)
+
+(CHECK VALIDITY)
+IF[#11 LT 54] GOTO 100
+IF[#11 GE 59] GOTO 100
+
+(READ ORIGIN VALUES G54 - G58)
+#11 = [#11 - 54] * 20
+#21 = #[5221 + #11] (X)
+#22 = #[5222 + #11] (Y)
+#23 = #[5223 + #11] (Z)
+#7  = #[5224 + #11] (B)
+
+(CALCULATE DIFFERENCE ROTATION AXIS TO POINT)
+#4 = #21 - #31 + #4 (X)
+#6 = #23 - #33 + #6 (Z)
+
+(CALCULATE SHIFT WITH ANGLE B)
+#4 = [#4 * COS[#2]] - [#6 * SIN[#2]] (X)
+#6 = [#6 * COS[#2]] + [#4 * SIN[#2]] (Z)
+
+(WRITE G59)
+#5321 = #31 + #4 + #24 (X)
+#5322 = #22            (Y)
+#5323 = #33 + #6 + #26 (Z)
+#5324 = #7
+
+G59 (ACTIVATE ORIGIN)
+GOTO 200
+
+N100 (ERROR)
+#3000=1(WRONG ORIGIN NUMBER)
+
+N200
+M99
+%
