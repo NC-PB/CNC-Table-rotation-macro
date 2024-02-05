@@ -23,7 +23,7 @@ IF[#11 GE 59] GOTO 100
 (CALCULATE DIFFERENCE ROTATION AXIS TO POINT)
 #4 = #21 - #31 + #4 (X)
 #5 = #22 - #32 + #5 (Y)
-#6 = #23 - #33 + #6 (Z)
+#6 = #23 - #36 + #6 (Z)
 
 (ROT AXIS OFFSET)
 #9 = #32 - #35
