@@ -33,7 +33,7 @@ IF[#11 GE 59] GOTO 100
 #16 = #6                              (Z)
 
 (CALCULATE SHIFT WITH ANGLE B)
-#4 = [#14 * COS[#2]] - [#16 * SIN[#2]] (Y)
+#4 = [#14 * COS[#2]] - [#16 * SIN[#2]] (X)
 #5 = #15                               (Y)
 #6 = [#16 * COS[#2]] + [#14 * SIN[#2]] (Z)
 
